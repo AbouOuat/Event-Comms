@@ -6,8 +6,7 @@ export default class Button extends LightningElement {
     
     //To allow the event (buttonclick) to bubble up to the lightning-layout-item, we add bubbles: true in the CustomEvent.
     handleButton(event) {
-        console.log("button A");
-      this.dispatchEvent(new CustomEvent('buttonclick',{
+        this.dispatchEvent(new CustomEvent('buttonclick',{
         bubbles: true
       }));
     }

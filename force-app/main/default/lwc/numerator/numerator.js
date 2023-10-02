@@ -1,5 +1,6 @@
-import { LightningElement, track } from 'lwc';
+//import { LightningElement, track } from 'lwc';
 
+import { LightningElement } from 'lwc';
 export default class Numerator extends LightningElement {
 
     // @track counter = 0;
@@ -10,7 +11,7 @@ export default class Numerator extends LightningElement {
     //   this.counter--;
     // }
 
-  counter = 0;
+  counter = 1;
   handleIncrement() {
     this.counter++;
   }
@@ -18,9 +19,15 @@ export default class Numerator extends LightningElement {
     this.counter--;
   }
   handleMultiply(event) {
-    console.log("handleMultiply numerator");
+    //console.log("handleMultiply numerator");
     const factor = event.detail;
     this.counter *= factor;
+  }
+
+  handleDividy(event) {
+    //console.log("handleDividy numerator");
+    const factor = event.detail;
+    this.counter /= factor;
   }
 
 }

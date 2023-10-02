@@ -37,6 +37,17 @@
             </template>
           </lightning-layout-item>
 
+          <lightning-layout-item flexibility="auto" padding="around-small" onbuttondiviserclick={handleDividy}>
+            <template for:each={factors} for:item="factor">
+              <c-buttondiviser
+                key={factor}
+                label={factor}
+                data-factor={factor}
+                icon="utility:percent">
+              </c-buttondiviser>
+            </template>
+          </lightning-layout-item>
+
           <lightning-layout-item flexibility="auto" padding="around-small">
             <lightning-button
               label="Add"
