@@ -1,6 +1,6 @@
 //import { LightningElement, track } from 'lwc';
 
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 export default class Numerator extends LightningElement {
 
     // @track counter = 0;
@@ -11,7 +11,9 @@ export default class Numerator extends LightningElement {
     //   this.counter--;
     // }
 
-  counter = 1;
+  
+    @api counter = 0;
+  //counter = 1;
   handleIncrement() {
     this.counter++;
   }
@@ -24,6 +26,11 @@ export default class Numerator extends LightningElement {
     this.counter *= factor;
   }
 
+  @api
+  maximizeCounter() {
+    this.counter += 1000000;
+  }
+  
   handleDividy(event) {
     //console.log("handleDividy numerator");
     const factor = event.detail;
