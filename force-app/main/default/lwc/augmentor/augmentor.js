@@ -8,7 +8,11 @@ export default class Augmentor extends LightningElement {
     }
 
     handleMaximizeCounter() {
-        this.template.querySelector('c-numerator').maximizeCounter();
+        //this.template.querySelector('c-numerator').maximizeCounter();
+        console.log(" startCounter Augmentor" );
+        console.log(" startCounter Augmentor " + this.startCounter );
+        this.template.querySelector('c-numerator').maximizeCounter({val : this.startCounter});
+        console.log(" startCounter Augmentor B" );
       }
 
 }
