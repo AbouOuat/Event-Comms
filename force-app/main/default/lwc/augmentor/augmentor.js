@@ -11,7 +11,7 @@ export default class Augmentor extends LightningElement {
         //this.template.querySelector('c-numerator').maximizeCounter();
         console.log(" startCounter Augmentor" );
         console.log(" startCounter Augmentor " + this.startCounter );
-        this.template.querySelector('c-numerator').maximizeCounter({val : this.startCounter});
+        this.template.querySelector('c-numerator').maximizeCounter({val : this.startCounter}); // On passe un arg nommé val et de valeur this.startcounter
         console.log(" startCounter Augmentor B" );
       }
 
